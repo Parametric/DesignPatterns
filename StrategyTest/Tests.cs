@@ -1,41 +1,41 @@
 ﻿using NUnit.Framework;
 using StrategyRefactor;
 
-namespace StrategyTests
+namespace StrategyTest
 {
     [TestFixture]
     public class Tests
     {
         [Test]
-        public void YoungDuckSaysTweet()
+        public void DucklingSaysTweet()
         {
-            var duck = new Duck(20, true, 0);
+            var duck = new Duckling();
             var greeting = duck.SayHello();
             Assert.That(greeting, Is.EqualTo("tweet"));
         }
 
         [Test]
-        public void OldDuckSaysQuack()
+        public void GrownUpDuckSaysQuack()
         {
-            var duck = new Duck(61, true, 0);
+            var duck = new GrownUp();
             var greeting = duck.SayHello();
             Assert.That(greeting, Is.EqualTo("quack"));
         }
 
         [Test]
-        public void LowUtilityDuckToolSaysSqueak()
+        public void DuckCallSaysQuack()
         {
-            var duck = new Duck(0, false, 0);
+            var duck = new DuckCall();
             var greeting = duck.SayHello();
-            Assert.That(greeting, Is.EqualTo("squeak"));
+            Assert.That(greeting, Is.EqualTo("quack"));
         }
 
         [Test]
-        public void NonZeroUtilityDuckToolSaysQuack()
+        public void DecoyIsSilent()
         {
-            var duck = new Duck(0, false, 10);
+            var duck = new Decoy();
             var greeting = duck.SayHello();
-            Assert.That(greeting, Is.EqualTo("quack"));
+            Assert.That(greeting, Is.EqualTo("< silence >"));
         }
     }
 }

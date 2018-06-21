@@ -1,45 +1,39 @@
 ﻿namespace StrategyRefactor
 {
-    public class Duck
+    public abstract class Duck
     {
-        public Duck(int ageInDays, bool isBird, int utilityScore)
+        public abstract string SayHello();
+    }
+
+    public class Duckling : Duck
+    {
+        public override string SayHello()
         {
-            AgeInDays = ageInDays;
-            IsBird = isBird;
-            UtilityScore = utilityScore;
+            return "tweet";
         }
+    }
 
-        public int AgeInDays { get; set; }
-        public bool IsBird { get; set; }
-        public int UtilityScore { get; set; }
-
-        public string SayHello()
+    public class GrownUp : Duck
+    {
+        public override string SayHello()
         {
-            string greeting;
-            if (IsBird)
-            {
-                if (AgeInDays < 60)
-                {
-                    greeting = "tweet";
-                }
-                else
-                {
-                    greeting = "quack";
-                }
-            }
-            else
-            {
-                if (UtilityScore == 0)
-                {
-                    greeting = "squeak";
-                }
-                else
-                {
-                    greeting = "quack";
-                }
-            }
+            return "quack";
+        }
+    }
 
-            return greeting;
+    public class DuckCall : Duck
+    {
+        public override string SayHello()
+        {
+            return "quack";
+        }
+    }
+
+    public class Decoy : Duck
+    {
+        public override string SayHello()
+        {
+            return "< silence >";
         }
     }
 }
