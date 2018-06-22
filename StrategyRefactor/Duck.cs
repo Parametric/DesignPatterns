@@ -1,39 +1,76 @@
-﻿namespace StrategyRefactor
+﻿using System;
+
+namespace StrategyRefactor
 {
+    public interface ISayHelloStrategy
+    {
+        string SayHello();
+    }
+    public class TweetStrategy : ISayHelloStrategy
+    {
+        public string SayHello()
+        {
+            return "tweet";
+        }
+    }
+    public class QuackStrategy : ISayHelloStrategy
+    {
+        public string SayHello()
+        {
+            return "quack";
+        }
+    }
+    public class DecoyStrategy : ISayHelloStrategy
+    {
+        public string SayHello()
+        {
+            return "< silence >";
+        }
+    }
+
+
     public abstract class Duck
     {
-        public abstract string SayHello();
+        protected ISayHelloStrategy Strategy;
+        public string InvokeGreeting()
+        {
+            return Strategy.SayHello();
+        }
+        public void UpdateQuackStrategy(ISayHelloStrategy strategy)
+        {
+            Strategy = strategy;
+        }
     }
 
     public class Duckling : Duck
     {
-        public override string SayHello()
+        public Duckling()
         {
-            return "tweet";
+            Strategy = new TweetStrategy();
         }
     }
 
     public class GrownUp : Duck
     {
-        public override string SayHello()
+        public GrownUp()
         {
-            return "quack";
+            Strategy = new QuackStrategy();
         }
     }
 
     public class DuckCall : Duck
     {
-        public override string SayHello()
+        public DuckCall()
         {
-            return "quack";
+            Strategy = new QuackStrategy();
         }
     }
 
     public class Decoy : Duck
     {
-        public override string SayHello()
+        public Decoy()
         {
-            return "< silence >";
+            Strategy = new DecoyStrategy();
         }
     }
 }

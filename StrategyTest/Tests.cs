@@ -10,7 +10,7 @@ namespace StrategyTest
         public void DucklingSaysTweet()
         {
             var duck = new Duckling();
-            var greeting = duck.SayHello();
+            var greeting = duck.InvokeGreeting();
             Assert.That(greeting, Is.EqualTo("tweet"));
         }
 
@@ -18,15 +18,27 @@ namespace StrategyTest
         public void GrownUpDuckSaysQuack()
         {
             var duck = new GrownUp();
-            var greeting = duck.SayHello();
+            var greeting = duck.InvokeGreeting();
             Assert.That(greeting, Is.EqualTo("quack"));
+        }
+
+        [Test]
+        public void GrownUpDuckWithSoreThroatSaysNothing()
+        {
+            var duck = new GrownUp();
+            var greeting = duck.InvokeGreeting();
+            Assert.That(greeting, Is.EqualTo("quack"));
+
+            duck.UpdateQuackStrategy(new DecoyStrategy());
+            var newGreeting = duck.InvokeGreeting();
+            Assert.That(newGreeting, Is.EqualTo("< silence >"));
         }
 
         [Test]
         public void DuckCallSaysQuack()
         {
             var duck = new DuckCall();
-            var greeting = duck.SayHello();
+            var greeting = duck.InvokeGreeting();
             Assert.That(greeting, Is.EqualTo("quack"));
         }
 
@@ -34,7 +46,7 @@ namespace StrategyTest
         public void DecoyIsSilent()
         {
             var duck = new Decoy();
-            var greeting = duck.SayHello();
+            var greeting = duck.InvokeGreeting();
             Assert.That(greeting, Is.EqualTo("< silence >"));
         }
     }
