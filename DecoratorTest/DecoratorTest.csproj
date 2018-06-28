@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C32E3335-F658-48B3-AE59-98E3C01E9A7D}</ProjectGuid>
+    <ProjectGuid>{89AF4E9F-6D9C-4DB2-9227-054F84EC7B53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DecoratorTest</RootNamespace>
@@ -59,15 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DecoratorRefactor\DecoratorRefactor.csproj">
-      <Project>{634773e8-648b-46dd-98e8-60e4f0cd77c7}</Project>
+      <Project>{7b9c5a28-dcec-4d92-a556-138541f2ced7}</Project>
       <Name>DecoratorRefactor</Name>
     </ProjectReference>
   </ItemGroup>
