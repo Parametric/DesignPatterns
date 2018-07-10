@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorRefactor", "Decora
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorTest", "DecoratorTest\DecoratorTest.csproj", "{89AF4E9F-6D9C-4DB2-9227-054F84EC7B53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryRefactor", "FactoryRefactor\FactoryRefactor.csproj", "{4471921A-C539-4462-AB91-CC2FA7685F7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryTest", "FactoryTest\FactoryTest.csproj", "{1A25D05F-229A-4362-85DA-1C7979A79BD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{89AF4E9F-6D9C-4DB2-9227-054F84EC7B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89AF4E9F-6D9C-4DB2-9227-054F84EC7B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89AF4E9F-6D9C-4DB2-9227-054F84EC7B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4471921A-C539-4462-AB91-CC2FA7685F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4471921A-C539-4462-AB91-CC2FA7685F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4471921A-C539-4462-AB91-CC2FA7685F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4471921A-C539-4462-AB91-CC2FA7685F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
