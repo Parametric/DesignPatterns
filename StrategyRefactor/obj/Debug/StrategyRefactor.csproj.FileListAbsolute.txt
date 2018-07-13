@@ -3,4 +3,3 @@ C:\Users\brents\src\DesignPatterns\StrategyRefactor\bin\Debug\StrategyRefactor.p
 C:\Users\brents\src\DesignPatterns\StrategyRefactor\obj\Debug\StrategyRefactor.csproj.CoreCompileInputs.cache
 C:\Users\brents\src\DesignPatterns\StrategyRefactor\obj\Debug\StrategyRefactor.dll
 C:\Users\brents\src\DesignPatterns\StrategyRefactor\obj\Debug\StrategyRefactor.pdb
-C:\Users\brents\src\DesignPatterns\StrategyRefactor\obj\Debug\StrategyRefactor.csprojResolveAssemblyReference.cache
