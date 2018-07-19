@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryRefactor", "FactoryR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryTest", "FactoryTest\FactoryTest.csproj", "{1A25D05F-229A-4362-85DA-1C7979A79BD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandRefactor", "CommandRefactor\CommandRefactor.csproj", "{493CA61F-B2A3-4D3E-A978-A4AD9BF68A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandTest", "CommandTest\CommandTest.csproj", "{BFECDA0D-8EDD-4142-82B0-C463B04CA38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A25D05F-229A-4362-85DA-1C7979A79BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493CA61F-B2A3-4D3E-A978-A4AD9BF68A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493CA61F-B2A3-4D3E-A978-A4AD9BF68A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493CA61F-B2A3-4D3E-A978-A4AD9BF68A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493CA61F-B2A3-4D3E-A978-A4AD9BF68A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFECDA0D-8EDD-4142-82B0-C463B04CA38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFECDA0D-8EDD-4142-82B0-C463B04CA38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFECDA0D-8EDD-4142-82B0-C463B04CA38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFECDA0D-8EDD-4142-82B0-C463B04CA38F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
