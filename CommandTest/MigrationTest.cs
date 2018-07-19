@@ -26,18 +26,6 @@ namespace CommandTest
         }
 
         [Test]
-        public void AddColumnWorksReallyWell()
-        {
-            var db = new Database();
-            var runner = new DatabaseMigrationRunner(db);
-            runner.Run("AddColumn", "col1", "");
-            runner.Run("AddColumn", "col2", "");
-            runner.Run("AddColumn", "col3", "");
-            runner.Run("RemoveColumn", "col2", "");
-            Assert.That(db.PrintSchema(), Is.EqualTo("col1 col3"));
-        }
-
-        [Test]
         public void ChangeColumnName()
         {
             var db = new Database();
