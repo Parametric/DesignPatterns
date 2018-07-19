@@ -9,38 +9,42 @@ namespace CommandTest
         [Test]
         public void AddColumnWorks()
         {
-            var runner = new MigrationRunner();
+            var db = new Database();
+            var runner = new DatabaseMigrationRunner(db);
             runner.Run("AddColumn", "col1", "");
-            Assert.That(runner.PrintSchema(), Is.EqualTo("col1"));
+            Assert.That(db.PrintSchema(), Is.EqualTo("col1"));
         }
 
         [Test]
         public void RemoveColumnWorks()
         {
-            var runner = new MigrationRunner();
+            var db = new Database();
+            var runner = new DatabaseMigrationRunner(db);
             runner.Run("AddColumn", "col1", "");
             runner.Run("RemoveColumn", "col1", "");
-            Assert.That(runner.PrintSchema(), Is.EqualTo(""));
+            Assert.That(db.PrintSchema(), Is.EqualTo(""));
         }
 
         [Test]
         public void AddColumnWorksReallyWell()
         {
-            var runner = new MigrationRunner();
+            var db = new Database();
+            var runner = new DatabaseMigrationRunner(db);
             runner.Run("AddColumn", "col1", "");
             runner.Run("AddColumn", "col2", "");
             runner.Run("AddColumn", "col3", "");
             runner.Run("RemoveColumn", "col2", "");
-            Assert.That(runner.PrintSchema(), Is.EqualTo("col1 col3"));
+            Assert.That(db.PrintSchema(), Is.EqualTo("col1 col3"));
         }
 
         [Test]
         public void ChangeColumnName()
         {
-            var runner = new MigrationRunner();
+            var db = new Database();
+            var runner = new DatabaseMigrationRunner(db);
             runner.Run("AddColumn", "col1", "");
             runner.Run("ChangeColumnName", "col1", "SuperCol");
-            Assert.That(runner.PrintSchema(), Is.EqualTo("SuperCol"));
+            Assert.That(db.PrintSchema(), Is.EqualTo("SuperCol"));
         }
     }
 }
