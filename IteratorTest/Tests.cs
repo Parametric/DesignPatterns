@@ -69,17 +69,15 @@ namespace IteratorTest
             new GlobalPrinter().PrintData(list.GetData());
         }
 
-        //[Test]
-        //public void DecoupleIteratorFromCollection()
-        //{
-        //    var iBox = new IntegerBox(new[] { 3, 4, 5, 6 });
-        //    IIterator iter1 = iBox.GetIterator();
-        //    new GlobalPrinter().PrintData(iter1); // ...use the same PrintData method
+        [Test]
+        public void DecoupleIteratorFromCollection()
+        {
+            //IIterable iBox = new IntegerBox(new[] { 3, 4, 5, 6 });
+            //new GlobalPrinter().PrintData(iter1); // ...use the same PrintData method
 
-        //    var list = new SomeList(new List<int> { 7, 8, 9 });
-        //    IIterator iter2 = list.GetIterator(); // ...for anything that implements IIterator
-        //    new GlobalPrinter().PrintData(iter2);
-        //}
+            //IIterable list = new SomeList(new List<int> { 7, 8, 9 });
+            //new GlobalPrinter().PrintData(iter2); // ...for anything that implements Iterable
+        }
 
         [Test]
         public void HowForEachWorksUnderTheHood()
