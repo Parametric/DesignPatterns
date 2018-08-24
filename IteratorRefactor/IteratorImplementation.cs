@@ -30,16 +30,16 @@ namespace IteratorRefactor
         }
     }
 
-    public class CharacterList
+    public class SomeList
     {
-        private List<char> _list;
+        private List<int> _list;
 
-        public CharacterList(List<char> list)
+        public SomeList(List<int> list)
         {
             _list = list;
         }
 
-        public List<char> GetData()
+        public List<int> GetData()
         {
             return _list;
         }
@@ -65,7 +65,7 @@ namespace IteratorRefactor
             Console.WriteLine();
         }
 
-        public void PrintData(List<char> data) 
+        public void PrintData(List<int> data) 
         {
             for (int i = 0; i < data.Count; i++)
                 Console.Write(data[i]);

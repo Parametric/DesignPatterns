@@ -62,10 +62,10 @@ namespace IteratorTest
         [Test]
         public void IterateOverCharList()
         {
-            var list = new CharacterList(new List<char> {'a', 'b', 'c'});
+            var list = new SomeList(new List<int> {9, 3, 6});
             // storing results just for demo
             var result = list.IterateOverData();
-            Assert.That(result, Is.EqualTo("abc"));
+            Assert.That(result, Is.EqualTo("936"));
             new GlobalPrinter().PrintData(list.GetData());
         }
 
@@ -76,7 +76,7 @@ namespace IteratorTest
         //    IIterator iter1 = iBox.GetIterator();
         //    new GlobalPrinter().PrintData(iter1); // ...use the same PrintData method
 
-        //    var list = new CharacterList(new List<char> { 'a', 'b', 'c' });
+        //    var list = new SomeList(new List<char> { 'a', 'b', 'c' });
         //    IIterator iter2 = list.GetIterator(); // ...for anything that implements IIterator
         //    new GlobalPrinter().PrintData(iter2);
         //}
