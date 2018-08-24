@@ -76,7 +76,7 @@ namespace IteratorTest
         //    IIterator iter1 = iBox.GetIterator();
         //    new GlobalPrinter().PrintData(iter1); // ...use the same PrintData method
 
-        //    var list = new SomeList(new List<char> { 'a', 'b', 'c' });
+        //    var list = new SomeList(new List<int> { 7, 8, 9 });
         //    IIterator iter2 = list.GetIterator(); // ...for anything that implements IIterator
         //    new GlobalPrinter().PrintData(iter2);
         //}
