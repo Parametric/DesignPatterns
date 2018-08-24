@@ -41,11 +41,14 @@ namespace IteratorTest
         [Test]
         public void ConcurrentIterationImpossible()
         {
-            // Since my iteration logic is tightly-coupled to IntegerBox...
-            // ...I can't access the list in multiple places at the same time...
+            // Since my iteration logic is tightly-coupled 
+            // to IntegerBox...
+            // ...I can't access the list in multiple places 
+            // at the same time...
             // ...yet
 
-            // how could multiple threads iterate over this object at the same time?
+            // how could multiple threads iterate over this 
+            // object at the same time?
             // see answer below
         }
 
@@ -72,11 +75,15 @@ namespace IteratorTest
         [Test]
         public void DecoupleIteratorFromCollection()
         {
-            //IIterable iBox = new IntegerBox(new[] { 3, 4, 5, 6 });
-            //new GlobalPrinter().PrintData(iter1); // ...use the same PrintData method
+            //IIterable iBox = 
+            //  new IntegerBox(new[] { 3, 4, 5, 6 });
+            // ...use the same PrintData method
+            //new GlobalPrinter().PrintData(iter1); 
 
-            //IIterable list = new SomeList(new List<int> { 7, 8, 9 });
-            //new GlobalPrinter().PrintData(iter2); // ...for anything that implements Iterable
+            //IIterable list = 
+            //  new SomeList(new List<int> { 7, 8, 9 });
+            // ...for anything that implements Iterable
+            //new GlobalPrinter().PrintData(iter2); 
         }
 
         [Test]
@@ -120,13 +127,20 @@ namespace IteratorTest
                 { 3, "shrub" },
                 { 5, "cactus" }
             };
-            IEnumerator<string> valueEnumerator1 = hash.Values.GetEnumerator();
-            IEnumerator<string> valueEnumerator2 = hash.Values.GetEnumerator();
-            IEnumerator<string> valueEnumerator3 = hash.Values.GetEnumerator();
+            IEnumerator<string> valueEnumerator1 = 
+                hash.Values.GetEnumerator();
+            IEnumerator<string> valueEnumerator2 = 
+                hash.Values.GetEnumerator();
+            IEnumerator<string> valueEnumerator3 = 
+                hash.Values.GetEnumerator();
 
             // for normally looks like this...
             // for(var i = 0; i < something.length; i++)
-            for (;valueEnumerator1.MoveNext() && valueEnumerator2.MoveNext() && valueEnumerator3.MoveNext();)
+            for (;
+                    valueEnumerator1.MoveNext() 
+                    && valueEnumerator2.MoveNext() 
+                    && valueEnumerator3.MoveNext();
+                )
             {
                 Console.WriteLine(valueEnumerator1.Current + " " + valueEnumerator1.Current.GetHashCode());
                 Console.WriteLine(valueEnumerator2.Current + " " + valueEnumerator1.Current.GetHashCode());
