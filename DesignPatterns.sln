@@ -28,6 +28,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorTest", "IteratorTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorRefactor", "IteratorRefactor\IteratorRefactor.csproj", "{A08A3604-891D-42B5-B744-17E7F8D8C659}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandrolledDependencyInjector", "HandrolledDependencyInjector\HandrolledDependencyInjector.csproj", "{A10EC388-8CBC-416C-B853-47800024AB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandrolledDependencyInjectorTest", "HandrolledDependencyInjectorTest\HandrolledDependencyInjectorTest.csproj", "{077A50BD-4596-448F-A972-8F2C964BB95C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +78,14 @@ Global
 		{A08A3604-891D-42B5-B744-17E7F8D8C659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A08A3604-891D-42B5-B744-17E7F8D8C659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A08A3604-891D-42B5-B744-17E7F8D8C659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10EC388-8CBC-416C-B853-47800024AB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10EC388-8CBC-416C-B853-47800024AB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10EC388-8CBC-416C-B853-47800024AB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10EC388-8CBC-416C-B853-47800024AB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077A50BD-4596-448F-A972-8F2C964BB95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077A50BD-4596-448F-A972-8F2C964BB95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077A50BD-4596-448F-A972-8F2C964BB95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077A50BD-4596-448F-A972-8F2C964BB95C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
